@@ -1,0 +1,782 @@
+@import url("https://fonts.googleapis.com/css?family=Fjalla+One|Montserrat:300,400,700,800|Open+Sans:300");
+body {
+ /*  background-image: linear-gradient(to right bottom, #b91eda, #a02ae0, #8234e5, #5d3be8, #1241eb);
+  */ height: 100%;
+  margin: 0;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+/*
+main {
+  max-width: 720px;
+  margin: 5% auto;
+}
+
+.card {
+  box-shadow: 0 6px 6px rgba(0, 0, 0, 0.3);
+  transition: 200ms;
+  background: #fff;
+}
+.card .card__title {
+  display: flex;
+  align-items: center;
+  padding: 30px 40px;
+}
+.card .card__title h3 {
+  flex: 0 1 200px;
+  text-align: right;
+  margin: 0;
+  color: #252525;
+  font-family: sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  text-transform: uppercase;
+}
+.card .card__title .icon {
+  flex: 1 0 10px;
+  background: #e99c2e;
+  color: #fff;
+  padding: 10px 10px;
+  transition: 200ms;
+}
+.card .card__title .icon > a {
+  color: #fff;
+}
+.card .card__title .icon:hover {
+  background: #252525;
+}
+.card .card__body {
+  padding: 0 40px;
+  display: flex;
+  flex-flow: row no-wrap;
+  margin-bottom: 25px;
+}
+.card .card__body > .half {
+  box-sizing: border-box;
+  padding: 0 15px;
+  flex: 1 0 50%;
+}
+.card .card__body .featured_text h1 {
+  margin: 0;
+  padding: 0;
+  font-weight: 800;
+  font-family: "Montserrat", sans-serif;
+  font-size: 64px;
+  line-height: 50px;
+  color: #181e28;
+}
+.card .card__body .featured_text p {
+  margin: 0;
+  padding: 0;
+}
+.card .card__body .featured_text p.sub {
+  font-family: "Montserrat", sans-serif;
+  font-size: 26px;
+  text-transform: uppercase;
+  color: #686e77;
+  font-weight: 300;
+  margin-bottom: 5px;
+}
+.card .card__body .featured_text p.price {
+  font-family: "Fjalla One", sans-serif;
+  color: #252525;
+  font-size: 26px;
+}
+.card .card__body .image {
+  padding-top: 15px;
+  width: 100%;
+}
+.card .card__body .image img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+.card .card__body .description {
+  margin-bottom: 25px;
+}
+.card .card__body .description p {
+  margin: 0;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 300;
+  line-height: 27px;
+  font-size: 16px;
+  color: #555;
+}
+.card .card__body span.stock {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  color: #a1cc16;
+}
+.card .card__body .reviews .stars {
+  display: inline-block;
+  list-style: none;
+  padding: 0;
+}
+.card .card__body .reviews .stars > li {
+  display: inline-block;
+}
+.card .card__body .reviews .stars > li .fa {
+  color: #f7c01b;
+}
+.card .card__body .reviews > span {
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;
+  margin-left: 5px;
+  color: #555;
+}
+.card .card__footer {
+  padding: 30px 40px;
+  display: flex;
+  flex-flow: row no-wrap;
+  align-items: center;
+  position: relative;
+}
+.card .card__footer::before {
+  content: "";
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 40px;
+  width: calc(100% - 40px);
+  height: 3px;
+  background: #e99c2e;
+  background: linear-gradient(to right, #e99c2e 0%, #e99c2e 20%, #ddd 20%, #ddd 100%);
+}
+.card .card__footer .recommend {
+  flex: 1 0 10px;
+}
+.card .card__footer .recommend p {
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 14px;
+  color: #555;
+}
+.card .card__footer .recommend h3 {
+  margin: 0;
+  font-size: 20px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #e99c2e;
+}
+.card .card__footer .action button {
+  cursor: pointer;
+  border: 1px solid #e99c2e;
+  padding: 14px 30px;
+  border-radius: 200px;
+  color: #fff;
+  background: #e99c2e;
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  transition: 200ms;
+}
+.card .card__footer .action button:hover {
+  background: #fff;
+  color: #e99c2e;
+}
+
+
+
+*/
+
+/*********************************************/
+/*COLORS*/
+/*********************************************/
+body {
+    font-family: "Titillium Web", sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    min-width: 320px;
+    position: relative;
+  }
+  
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none !important;
+  }
+  
+  a {
+    text-decoration: none;
+    color: black;
+  }
+  a:hover, a:focus, a:active {
+    text-decoration: none;
+    color: black;
+  }
+  
+  input,
+  input:focus,
+  input:active {
+    outline: none;
+  }
+  
+  button,
+  button:active,
+  button:focus,
+  button:hover {
+    outline: none;
+  }
+  
+  button {
+    padding: 0;
+    margin: 0;
+    background-color: transparent;
+    color: #000;
+  }
+  
+  .mainWrapper {
+    position: relative;
+    width: 100%;
+    min-width: 320px;
+    min-height: 1000px;
+    padding: 0;
+    margin: 0 !important;
+    background: radial-gradient(rgb(48, 61, 85), rgb(47, 51, 82));
+  }
+  
+  .wrappen_block {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .mainBackground {
+    width: 100%;
+    min-height: 1000px;
+    background: url("https://github.com/BlackStar1991/CardProduct/blob/master/app/img/bgRectangl.png?raw=true") left center no-repeat, url("https://github.com/BlackStar1991/CardProduct/blob/master/app/img/bgPhons.png?raw=true") center center no-repeat, url("https://github.com/BlackStar1991/CardProduct/blob/master/app/img/layer-3-copy-2.png?raw=true") center center no-repeat, url("https://github.com/BlackStar1991/CardProduct/blob/master/app/img/mainBg.png?raw=true") center center no-repeat;
+  }
+  
+  .productCard_block {
+    position: relative;
+    margin: 190px auto 0;
+    max-width: 800px;
+    min-height: 600px;
+    box-shadow: 0 5px 21px rgba(0, 0, 0, 0.08);
+    background-color: #fff;
+  }
+  
+  /* LEFT SIDE */
+  .productCard_leftSide {
+    position: relative;
+    width: 100%;
+    min-height: 600px;
+  }
+  
+  .productCard_brendBlock {
+    width: 100%;
+    height: 75px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    max-width: 184px;
+    max-height: 75px;
+    background-color: #272727;
+   
+  }
+  .productCard_brendBlock__imageBlock {
+    display: block;
+    height: 100%;
+    display: inline-block;
+    color: #616060;
+    font-size: 4.5rem;
+    font-weight: 500;
+    margin-left: 11%;
+    text-transform:capitalize;
+    text-decoration: none;
+  }
+  .productCard_brendBlock__imageBlock span {
+   
+    display: inline-block;
+    color:#e99c2e;
+    text-transform:capitalize;
+  }
+  
+  .sliderBlock {
+    position: relative;
+    height: 100%;
+    margin-left: 70px;
+    margin-top: 89px;
+    margin-bottom: 46px;
+    overflow: hidden;
+  }
+  
+  .sliderBlock_items {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 403px;
+  }
+  .sliderBlock_items__itemPhoto {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    /* z-index: 2; */
+    transition: opacity 1s;
+  }
+  .sliderBlock_items__showing {
+    opacity: 1;
+   /*  z-index: 3; */
+  }
+  .sliderBlock_items:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: url("https://github.com/BlackStar1991/CardProduct/blob/master/app/img/decorElements/DecorRectangle.png") 50% 50% no-repeat;
+    opacity: 0.2;
+    z-index: 4;
+  }
+  
+  .sliderBlock_controls {
+    width: 100%;
+  }
+  .sliderBlock_controls__navigatin {
+    margin-top: 8px;
+    width: 100%;
+  }
+  .sliderBlock_controls__wrapper {
+    margin: 1% auto;
+    width: 110px;
+    height: 20px;
+  }
+  .sliderBlock_controls__arrow {
+    position: relative;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    border: 1px solid #536dfe;
+    transition: 300ms all;
+    background-color: #0d2660;
+    border-radius: 50%;
+  }
+  .sliderBlock_controls__arrow:hover {
+    background-color: #536dfe;
+  }
+  .sliderBlock_controls__arrow i {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 50%;
+    left: 50%;
+    margin-left: -50%;
+    margin-top: -50%;
+    color: #fff;
+    transition: 300ms all;
+    font-weight: bold;
+    text-align: center;
+    font-size: 20px;
+  }
+  .sliderBlock_controls__arrowBackward {
+    float: left;
+  }
+  .sliderBlock_controls__arrowForward {
+    float: right;
+  }
+  
+  .sliderBlock_positionControls {
+    display: block;
+    width: 100%;
+    height: 3px;
+    margin: 30px auto 0;
+  }
+  .sliderBlock_positionControls__paginatorItem {
+    float: left;
+    width: 18px;
+    height: 10px;
+    margin-left: 5px;
+    background-color: #d7d7d7;
+    cursor: pointer;
+  }
+  .sliderBlock_positionControls__paginatorItem:first-child {
+    margin-left: 31%;
+  }
+  .sliderBlock_positionControls__active {
+    background-color: #536dfe;
+  }
+  
+  /*   RIGHT SIDE */
+  .productCard_rightSide {
+    position: relative;
+    padding-top: 34px;
+    padding-left: 27px;
+    padding-right: 40px;
+    width: 100%;
+    min-height: 600px;
+  }
+  
+  .block_specification {
+    float: right;
+    margin-top: 8px;
+    cursor: pointer;
+    color: #536dfe;
+    transition: all 0.5s;
+  }
+  .block_specification__button {
+    display: inline-block;
+    margin-right: 7px;
+    height: 100%;
+    font-size: 17px;
+    text-transform: uppercase;
+    transform: rotate(0);
+    transition: transform 0.5s;
+    transform-origin: center center;
+  }
+  .block_specification:hover .block_specification__button__rotate {
+    transition: transform 0.5s;
+    transform: rotate(1turn);
+  }
+  .block_specification:hover {
+    color: #f1425d;
+  }
+  
+  .block_specification__text {
+    width: 30px;
+    height: 11px;
+    font-family: "Titillium Web", sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+  
+  .block_model {
+    display: inline-block;
+    color: #263238;
+    font-size: 12px;
+    opacity: 0.9;
+  }
+  
+  .block_name {
+    width: 100%;
+    color: #263238;
+    font-weight: 400;
+    line-height: 35px;
+  }
+  .block_name__mainName {
+    margin: 0;
+    padding: 0;
+    font-size: 29px;
+  }
+  .block_name__addName {
+    margin: 0;
+    padding: 0;
+    font-size: 24px;
+  }
+  
+  .block_product {
+    position: relative;
+    width: 100%;
+  }
+  .block_product__advantagesProduct {
+    width: 271px;
+    height: 41px;
+    margin-top: 14px;
+    color: #646b6f;
+    font-size: 17px;
+    line-height: 24px;
+  }
+  .block_product__link {
+    line-height: 23px;
+    color: #536dfe;
+  }
+  
+  .block_informationAboutDevice {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+  }
+  
+  .block_descriptionInformation {
+    width: 304px;
+    height: 104px;
+    margin-top: 10px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 23px;
+    color: #263238;
+  }
+  
+  .block_descriptionCharacteristic {
+    position: absolute;
+    top: 0;
+    left: 100%;
+    width: 100%;
+    height: 100%;
+    z-index: 30;
+    transition: left, ease-out, 0.5s;
+  }
+  .block_descriptionCharacteristic__active {
+    left: 0;
+  }
+  
+  @keyframes moveCharackeristic {
+    0% {
+      left: 100%;
+    }
+    100% {
+      left: 0;
+    }
+  }
+  .block_specificationInformation_table {
+    position: relative;
+    height: 90%;
+    background-color: #fff;
+  }
+  .block_specificationInformation_table tr {
+    border-collapse: collapse;
+    border: 1px solid #000;
+  }
+  .block_specificationInformation_table th {
+    border: 1px solid #000;
+    font-weight: bold;
+  }
+  .block_specificationInformation_table td {
+    border-collapse: collapse;
+    text-align: center;
+    border: 1px solid #000;
+  }
+  
+  .block_rating {
+    width: 100%;
+    margin-top: 33px;
+  }
+  
+  fieldset,
+  label {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .block_rating__stars {
+    border: none;
+    float: left;
+    width: auto;
+    margin: 0;
+    padding: 0;
+  }
+  
+  input[type=checkbox] + label,
+  input[type=radio] + label {
+    margin: 0;
+  }
+  
+  .block_rating__stars > input {
+    display: none;
+  }
+  
+  .block_rating__stars > label:before {
+    margin: 5px;
+    font-size: 15px;
+    font-family: "FontAwesome";
+    display: inline-block;
+    content: "\f005";
+  }
+  
+  .block_rating__stars > .half:before {
+    content: "\f089";
+    position: absolute;
+  }
+  
+  .block_rating__stars > label {
+    color: #c9c9c9;
+    float: right;
+  }
+  
+  /***** CSS Magic to Highlight Stars on Hover *****/
+  .block_rating__stars > input:checked ~ label,
+  .block_rating__stars:not(:checked) > label:hover,
+  .block_rating__stars:not(:checked) > label:hover ~ label {
+    color: #fccf47;
+  }
+  
+  /* hover previous stars in list */
+  .block_rating__stars > input:checked + label:hover,
+  .block_rating__stars > input:checked ~ label:hover,
+  .block_rating__stars > label:hover ~ input:checked ~ label,
+  .block_rating__stars > input:checked ~ label:hover ~ label {
+    color: #ffed85;
+  }
+  
+  .block_rating__avarage {
+    margin-left: 31px;
+    color: #f1425d;
+    font-size: 15px;
+    line-height: 35px;
+  }
+  
+  .block_rating__reviews {
+    margin-left: 6px;
+    color: #656c6f;
+    font-size: 13px;
+  }
+  
+  .block_price {
+    margin-top: 29px;
+    width: 100%;
+  }
+  .block_price__currency {
+    padding: 0;
+    margin: 0;
+    vertical-align: top;
+    color: #f1425d;
+    font-size: 26px;
+    font-weight: 600;
+  }
+  .block_price__shipping {
+    padding: 0;
+    margin: 0;
+    color: #a2a9ad;
+    font-size: 12px;
+  }
+  
+  .radio_button {
+    position: absolute;
+    opacity: 0;
+  }
+  
+  .block_goodColor {
+    margin-top: 29px;
+    width: 100%;
+  }
+  .block_goodColor__allColors {
+    width: 100%;
+    margin-top: 14px;
+  }
+  .block_goodColor__radio {
+    display: inline-block;
+    width: 21px;
+    height: 21px;
+    border-radius: 50%;
+    margin-left: 10% !important;
+    background-color: #e8e6e3;
+    cursor: pointer;
+  }
+  
+  .radio_button:checked + .block_goodColor__radio {
+    width: 25px;
+    height: 25px;
+    box-shadow: 0 0 5px 3px rgba(83, 109, 254, 0.5);
+    border: 2px solid #fff;
+  }
+  
+  .block_goodColor__black {
+    background-color: #3c383a;
+  }
+  
+  .block_goodColor__silver {
+    background-color: silver;
+  }
+  
+  .text_specification {
+    padding: 0;
+    color: #37474f;
+    font-size: 13px;
+  }
+  
+  .block_quantity {
+    position: relative;
+    height: 46px;
+    margin-top: 45px;
+  }
+  .block_quantity span {
+    display: inline-block;
+    float: left;
+    margin-top: 15px;
+    margin-right: 10px;
+  }
+  .block_quantity__chooseBlock {
+    vertical-align: top;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  .block_quantity__number {
+    display: inline-block;
+    float: left;
+    width: 52px;
+    height: 46px;
+    border: 1px solid #ddd;
+    font-size: 18px;
+  }
+  .block_quantity__number::placeholder {
+    color: #403f40;
+    font-size: 18px;
+    line-height: 35px;
+  }
+  .block_quantity__button {
+    display: inline-block;
+    position: relative;
+    float: left;
+    width: 20px;
+    height: 50%;
+    margin: 0;
+    padding: 0;
+    margin-left: 11px;
+    font-size: 0;
+    cursor: pointer;
+  }
+  .block_quantity__button:hover, .block_quantity__button:focus {
+    background-color: transparent;
+  }
+  .block_quantity__button:hover:before, .block_quantity__button:focus:before {
+    color: #536dfe;
+  }
+  .block_quantity__up:before {
+    content: "\f106";
+    width: 11px;
+    height: 6px;
+    font-family: "FontAwesome";
+    color: #37474f;
+    font-size: 18px;
+  }
+  .block_quantity__down:before {
+    content: "\f107";
+    width: 11px;
+    height: 6px;
+    font-family: "FontAwesome";
+    color: #37474f;
+    font-size: 18px;
+  }
+  
+  .button.button_addToCard {
+    width: 147px;
+    height: 46px;
+    margin-top: 43px;
+    margin-bottom: 0;
+    padding: 0;
+    color: #fff;
+    background-color: #536dfe;
+    font-size: 17px;
+    transition: all 0.3s;
+  }
+  .button.button_addToCard:hover {
+    background-color: #0d2660;
+  }
+  
+  .aboutMe a {
+    display: block;
+    width: 30%;
+    position: fixed;
+    bottom: 0.1%;
+    left: 20px;
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 1.5em;
+    font-family: "Roboto", sans-serif;
+    text-decoration: none;
+  }
+
+  .btn-cart {
+    justify-content: center;
+    margin-left: 20%;
+    margin-bottom: 10%;
+  }
