@@ -550,6 +550,12 @@ ul.cart-list > li.total {
 .new-arrivals {padding:85px 0 70px;}
 .new-arrivals-content{margin-top: 80px;}
 
+/* .new-arrivals .section-header h2 {
+    font-size: 30px;
+    font-weight: 500;
+    color: #616060;
+} */
+
 .single-new-arrival{margin-bottom: 50px;text-align: center;}
 .single-new-arrival-bg {
     position: relative;
@@ -741,10 +747,11 @@ span.feature-review {margin-left: 10px;}
     color: #5f5b57;
     margin: 10px 0px 15px;
 }
-.single-feature-txt h5 {
+.single-feature-txt h5 h2 h3 {
     color:  #5f5b57;
     font-weight:  400;
 }
+
 /*.single-feature-txt */
 
 /*-------------------------------------       
@@ -1052,6 +1059,10 @@ span.feature-review {margin-left: 10px;}
     color: rgba(255, 255, 255, 0.7);
   }
   
-
+.text-grey {
+    font-size: 30px;
+    font-weight: 500;
+    color: #616060;
+}
   
 /*========================Thank you=================
