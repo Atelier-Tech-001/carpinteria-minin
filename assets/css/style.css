@@ -153,6 +153,7 @@ nav.navbar.bootsnav ul.nav > li.dropdown span {
     margin-left: 15px;
 }
 .wrap-sticky nav.navbar.bootsnav.sticked ul.nav > li > a{padding:30px 25px;}
+.navbar>.container{background-color: #fff;}
 /*.nav li*/
 
 /*.menu-ui-design*/
@@ -527,7 +528,22 @@ ul.cart-list > li.total {
     background: #5f5b57;
     border: 1px solid #5f5b57;
 }
+.single-servicio-img {
+    position: relative;
+    overflow: hidden;
 
+}
+.single-servicio-img h2 {
+    margin-top: 10px;
+    text-align: center;
+    justify-content: center;
+}
+.single-inner-servicio-img {
+    width: 100%;
+}
+.single-servicio h2 {
+    color: rgba(var(--bs-link-color-rgb));
+}
 /*-------------------------------------
         5. New-arrivals 
 --------------------------------------*/
@@ -660,8 +676,8 @@ p.arrival-review span {margin-right: 15px;}
     background-position: center;
     background-size: cover;
 }
-.sofa-collection.collectionbg1{background: url(../images/collection/m3.jpg)no-repeat; background-size: cover; }
-.sofa-collection.collectionbg2{background: url(../images/collection/table-banner.jpg)no-repeat;}
+.sofa-collection.collectionbg1{background: url(../images/collection/c1.jpg)no-repeat; background-size: cover; }
+.sofa-collection.collectionbg2{background: url(../images/collection/c2.jpg)no-repeat;}
 
 .sofa-collection:before,.sofa-collection:after {
     position: absolute;
