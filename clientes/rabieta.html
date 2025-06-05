@@ -1,0 +1,923 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cliente-RabietaPilar</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+
+    <style>
+        /* Estilos Generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2.5rem;
+    color: #5d4037;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background-color: #8d6e63;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: #8d6e63;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #5d4037;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Navegación Traslúcida */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: rgba(255, 221, 197, 0.8);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+}
+.navbar-brand {
+    font-size: 28px;
+    font-weight: bold;
+    color: #333; /* gris oscuro */
+    text-decoration: none;
+}
+
+.navbar-brand span {
+    color: #FF7F00; /* anaranjado */
+}
+
+.logo h1 {
+    font-size: 2rem;
+    color: #5d4037;
+    font-weight: 700;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+}
+
+.nav-menu li {
+    margin-left: 30px;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: #5d4037;
+    font-weight: 500;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+}
+
+.nav-menu a:hover {
+    color: #8d6e63;
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #5d4037;
+}
+
+/* Hero Project Section */
+.hero-project {
+    position: relative;
+    height: 70vh;
+    min-height: 500px;
+    overflow: hidden;
+}
+
+.hero-image-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.hero-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.3) 0%,
+        rgba(0, 0, 0, 0.1) 50%,
+        rgba(0, 0, 0, 0.7) 100%
+    );
+    display: flex;
+    align-items: flex-end;
+}
+
+.hero-content {
+    padding: 3rem;
+    color: var(--text-white);
+    max-width: 800px;
+}
+
+.project-title {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    color: #fff;
+    text-align: center;
+}
+
+.project-meta {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.project-date,
+.project-category {
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+    opacity: 0.8;
+}
+
+.project-date i,
+.project-category i {
+    margin-right: 0.5rem;
+    color: var(--primary-color);
+}
+
+/* Project Description */
+.project-description {
+    padding: 4rem 0;
+    background: var(--text-white);
+}
+
+.section-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
+    color: var(--text-dark);
+    text-align: center;
+}
+
+.description-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 3rem;
+    margin-top: 2rem;
+}
+
+.description-text {
+    font-size: 1.125rem;
+    line-height: 1.8;
+}
+
+.lead-text {
+    font-size: 1.375rem;
+    font-weight: 600;
+    color: var(--text-dark);
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+.description-text p {
+    margin-bottom: 1.5rem;
+    color: var(--text-light);
+}
+
+.project-details {
+    background: var(--bg-light);
+    padding: 2rem;
+    border-radius: 1rem;
+    height: fit-content;
+}
+
+.project-details h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    color: var(--text-dark);
+}
+
+.details-list {
+    list-style: none;
+}
+
+.details-list li {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.75rem 0;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.details-list li:last-child {
+    border-bottom: none;
+}
+
+.detail-label {
+    font-weight: 600;
+    color: var(--text-dark);
+}
+
+.detail-value {
+    color: var(--text-light);
+    text-align: right;
+}
+
+/* Project Gallery */
+.project-gallery {
+    padding: 4rem 0;
+    background: var(--bg-light);
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 200px);
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 0.75rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.gallery-item:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-xl);
+}
+
+.gallery-item.large {
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+.gallery-item.medium {
+    grid-column: span 2;
+    grid-row: span 1;
+}
+
+.gallery-item.small {
+    grid-column: span 2;
+    grid-row: span 1;
+}
+
+.gallery-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.gallery-item:hover .gallery-image {
+    transform: scale(1.05);
+}
+
+.gallery-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        to bottom,
+        transparent 0%,
+        rgba(0, 0, 0, 0.8) 100%
+    );
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 1.5rem;
+    color: var(--text-white);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.gallery-item:hover .gallery-overlay {
+    opacity: 1;
+}
+
+.gallery-overlay h4 {
+    font-size: 1.125rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.gallery-overlay p {
+    font-size: 0.875rem;
+    opacity: 0.9;
+}
+
+/* Lightbox */
+.lightbox {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.9);
+    z-index: 9999;
+    justify-content: center;
+    align-items: center;
+}
+
+.lightbox.active {
+    display: flex;
+}
+
+.lightbox-content {
+    position: relative;
+    max-width: 90vw;
+    max-height: 90vh;
+}
+
+.lightbox-close {
+    position: absolute;
+    top: -40px;
+    right: 0;
+    color: var(--text-white);
+    font-size: 2rem;
+    cursor: pointer;
+    z-index: 10001;
+}
+
+.lightbox-close:hover {
+    color: var(--primary-color);
+}
+
+#lightboxImage {
+    max-width: 100%;
+    max-height: 80vh;
+    object-fit: contain;
+}
+
+.lightbox-caption {
+    color: var(--text-white);
+    text-align: center;
+    padding: 1rem;
+    font-size: 1.125rem;
+}
+
+.lightbox-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 2rem;
+}
+
+.lightbox-prev,
+.lightbox-next {
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    color: var(--text-white);
+    font-size: 1.5rem;
+    padding: 1rem;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.lightbox-prev:hover,
+.lightbox-next:hover {
+    background: var(--primary-color);
+}
+
+/* CTA Section */
+.cta-section {
+    padding: 4rem 0;
+    background: var(--text-white);
+    text-align: center;
+}
+
+.cta-content h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    color: var(--text-dark);
+}
+
+.cta-content p {
+    font-size: 1.25rem;
+    color: var(--text-light);
+    margin-bottom: 2rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Botones */
+.btn {
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.btn-primary {
+    background: var(--primary-color);
+    color: var(--text-white);
+}
+
+.btn-primary:hover {
+    background: var(--primary-hover);
+    transform: translateY(-2px);
+}
+
+.btn-large {
+    padding: 1rem 2rem;
+    font-size: 1.125rem;
+}
+
+.btn-full {
+    width: 100%;
+}
+
+/* Footer */
+.footer {
+    background-color: #5d4037;
+    color: white;
+    padding: 60px 0 20px;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.social-icons a {
+    color: white;
+    margin-left: 15px;
+    font-size: 5rem;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #d7ccc8;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.contact-info h3 {
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+}
+
+.contact-info p {
+    margin-bottom: 10px;
+    font-size: 1rem;
+    color: #fff;
+}
+
+.contact-info .social-icons {
+    margin-top: 15px;
+    text-align: center;
+}
+
+.whatsapp-float {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #25D366;
+    color: white;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    font-size: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
+}
+
+
+/* Responsive */
+@media (max-width: 992px) {
+    .carousel-caption h2 {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-menu {
+        position: fixed;
+        top: 70px;
+        left: -100%;
+        width: 100%;
+        background-color: rgba(255, 255, 255, 0.95);
+        flex-direction: column;
+        padding: 20px 0;
+        transition: left 0.3s ease;
+    }
+
+    .nav-menu.active {
+        left: 0;
+    }
+
+    .nav-menu li {
+        margin: 10px 0;
+        text-align: center;
+    }
+
+    .carousel-caption h2 {
+        font-size: 2rem;
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 576px) {
+    .carousel-caption {
+        bottom: 10%;
+        left: 5%;
+    }
+
+    .carousel-caption h2 {
+        font-size: 1.5rem;
+        margin-bottom: 10px;
+    }
+
+    .btn {
+        padding: 8px 16px;
+        font-size: 0.9rem;
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+}
+    </style>
+</head>
+
+<body>
+     <!-- Navegación Traslúcida -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+              <a class="navbar-brand" href="/CarpinteriaCH2V/index.html">MI<span>N</span>IN</a>
+            </div>
+            <div class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#clientes">Clientes</a></li>
+                <li><a href="#productos">Productos</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </div>
+    </nav>
+
+<!-- Main Content -->
+    <main class="main-content">
+        <!-- Hero Image Section -->
+        <section class="hero-project">
+            <div class="hero-image-container">
+                <img src="/carpinteria-minin/assets/images/RabietaA.jpg" 
+                     alt="Casa Moderna Los Altos - Vista Principal" 
+                     class="hero-image"
+                     id="heroImage">
+                <div class="hero-overlay">
+                    <div class="hero-content">
+                        <h1 class="project-title">Tienda de bebidas</h1> 
+                        <div class="project-meta">
+                            <span class="project-date">
+                                <i class="fas fa-calendar"></i>
+                                Completado en Marzo 2024
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Project Description -->
+        <section class="project-description">
+            <div class="container">
+                <div class="description-content">
+                    <h2 class="section-title">Sobre el Proyecto</h2>
+                    <div class="description-grid">
+                        <div class="description-text">
+                            <p class="lead-text">
+                                Un proyecto integral de mobiliario para un bar moderno de 550m² que combina 
+                                elegancia contemporánea con funcionalidad excepcional.
+                            </p>
+                            <p>
+                                Trabajamos en estrecha colaboración con la familia Rabieta Pilae para crear espacios únicos 
+                                que reflejen su estilo de vida moderno. El proyecto incluyó el diseño y fabricación 
+                                de mobiliario personalizado para todas las áreas del local.
+                            </p>
+                            <p>
+                                Utilizamos maderas nobles como roble y nogal, combinadas con acabados en laca mate 
+                                y herrajes de alta calidad. Cada pieza fue diseñada pensando en la durabilidad 
+                                y la atemporalidad del diseño.
+                            </p>
+                        </div>
+                        <div class="project-details">
+                            <h3>Detalles del Proyecto</h3>
+                            <ul class="details-list">
+                                <li>
+                                    <span class="detail-label">Cliente:</span>
+                                    <span class="detail-value">Familia Rabieta Pilar</span>
+                                </li>
+                                <li>
+                                    <span class="detail-label">Duración:</span>
+                                    <span class="detail-value">8 semanas</span>
+                                </li>
+                                <li>
+                                    <span class="detail-label">Área:</span>
+                                    <span class="detail-value">550 m²</span>
+                                </li>
+                                <li>
+                                    <span class="detail-label">Materiales:</span>
+                                    <span class="detail-value">Roble, Nogal, Laca</span>
+                                </li>
+                                <li>
+                                    <span class="detail-label">Estilo:</span>
+                                    <span class="detail-value">Moderno Contemporáneo</span>
+                                </li>
+                                <li>
+                                    <span class="detail-label">Presupuesto:</span>
+                                    <span class="detail-value">$45,000 - $60,000</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Project Gallery -->
+        <section class="project-gallery">
+            <div class="container">
+                <h2 class="section-title">Galería del Proyecto</h2>
+                <div class="gallery-grid" id="galleryGrid">
+                    <!-- Imagen grande principal -->
+                    <div class="gallery-item large" data-aos="fade-up">
+                        <img src="/carpinteria-minin/assets/images/Rabieta1.jpeg" 
+                             alt="Cocina Integral Moderna" 
+                             class="gallery-image"
+                             onclick="openLightbox(this)">
+                        <div class="gallery-overlay">
+                            <h4>Cocina Integral</h4>
+                            <p>Diseño moderno con isla central</p>
+                        </div>
+                    </div>
+
+                    <!-- Imagen mediana -->
+                    <div class="gallery-item medium" data-aos="fade-up" data-aos-delay="100">
+                        <img src="/carpinteria-minin/assets/images/Rabieta2.jpeg"
+                             alt="Dormitorio Principal" 
+                             class="gallery-image"
+                             onclick="openLightbox(this)">
+                        <div class="gallery-overlay">
+                            <h4>Dormitorio Principal</h4>
+                            <p>Closet empotrado y cabecera</p>
+                        </div>
+                    </div>
+
+                    <!-- Imagen pequeña -->
+                    <div class="gallery-item small" data-aos="fade-up" data-aos-delay="200">
+                        <img src="/carpinteria-minin/assets/images/Rabieta3.jpeg"
+                             alt="Sala de Estar" 
+                             class="gallery-image"
+                             onclick="openLightbox(this)">
+                        <div class="gallery-overlay">
+                            <h4>Sala de Estar</h4>
+                            <p>Mueble de entretenimiento</p>
+                        </div>
+                    </div>
+
+                    <!-- Imagen mediana -->
+                    <div class="gallery-item medium" data-aos="fade-up" data-aos-delay="300">
+                        <img src="/carpinteria-minin/assets/images/Rabieta4.jpeg"
+                             alt="Oficina en Casa" 
+                             class="gallery-image"
+                             onclick="openLightbox(this)">
+                        <div class="gallery-overlay">
+                            <h4>Oficina en Casa</h4>
+                            <p>Escritorio y librería integrada</p>
+                        </div>
+                    </div>
+
+                    <!-- Imagen pequeña -->
+                    <div class="gallery-item small" data-aos="fade-up" data-aos-delay="400">
+                        <img src="/carpinteria-minin/assets/images/Rabieta5.jpeg"
+                             alt="Baño Principal" 
+                             class="gallery-image"
+                             onclick="openLightbox(this)">
+                        <div class="gallery-overlay">
+                            <h4>Baño Principal</h4>
+                            <p>Vanidad personalizada</p>
+                        </div>
+                    </div>
+
+                    <!-- Imagen grande -->
+                    <div class="gallery-item large" data-aos="fade-up" data-aos-delay="500">
+                        <img src="/carpinteria-minin/assets/images/Rabieta6.jpeg"
+                             alt="Comedor Familiar" 
+                             class="gallery-image"
+                             onclick="openLightbox(this)">
+                        <div class="gallery-overlay">
+                            <h4>Comedor Familiar</h4>
+                            <p>Mesa de roble macizo para 8 personas</p>
+                        </div>
+                    </div>
+
+                    <!-- Imagen pequeña -->
+                    <div class="gallery-item small" data-aos="fade-up" data-aos-delay="600">
+                        <img src="/carpinteria-minin/assets/images/Rabieta7.jpeg"
+                             alt="Detalles de Acabado" 
+                             class="gallery-image"
+                             onclick="openLightbox(this)">
+                        <div class="gallery-overlay">
+                            <h4>Detalles</h4>
+                            <p>Acabados en nogal</p>
+                        </div>
+                    </div>
+
+                    <!-- Imagen mediana -->
+                    <div class="gallery-item medium" data-aos="fade-up" data-aos-delay="700">
+                        <img src="/carpinteria-minin/assets/images/Rabieta8.jpeg"
+                             alt="Proceso de Fabricación" 
+                             class="gallery-image"
+                             onclick="openLightbox(this)">
+                        <div class="gallery-overlay">
+                            <h4>Proceso</h4>
+                            <p>Fabricación en taller</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Call to Action -->
+        <section class="cta-section">
+            <div class="container">
+                <div class="cta-content">
+                    <h2>¿Te gustó este proyecto?</h2>
+                    <p>Descubre más trabajos realizados por nuestro equipo de expertos carpinteros</p>
+                    <a href="/carpinteria-minin/index.html" class="btn btn-primary btn-large">
+                        <i class="fas fa-arrow-right"></i>
+                        Ver Otros Trabajos
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Lightbox Modal -->
+    <div class="lightbox" id="lightbox">
+        <div class="lightbox-content">
+            <span class="lightbox-close" onclick="closeLightbox()">&times;</span>
+            <img src="/placeholder.svg" alt="" id="lightboxImage">
+            <div class="lightbox-caption" id="lightboxCaption"></div>
+            <div class="lightbox-nav">
+                <button class="lightbox-prev" onclick="prevImage()">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <button class="lightbox-next" onclick="nextImage()">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+     <!-- Footer con Maps y Contacto -->
+<footer id="contacto" class="footer">
+   
+            <!-- Info de contacto + redes -->
+            <div class="contact-info">
+                <h3>Información de contacto</h3>
+                <p><strong>Dirección:</strong> Av. Cnel. Roca 7131, C1439 CABA, Buenos Aires</p>
+                <p><strong>Horario:</strong> Lunes a Sábado de 9 a 18 hs</p>
+                <div class="social-icons">
+                    <a href="https://www.instagram.com/carpinteria.ch2v?igsh=cWMwdW8xMHd1OXMw" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://wa.me/5491171573793?text=¡Hola!%20Estoy%20interesado%20en%20los%20muebles%20de%20la%20carpintería." 
+                       target="_blank" rel="noopener noreferrer">
+                       <i class="fab fa-whatsapp"></i>
+                    </a>  
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2025 Carpintería Minin. Todos los derechos reservados.</p>
+        </div>
+    </div>
+</footer>
+
+    <script src="/CarpinteriaCH2V/scripts/clientes.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap" async defer></script>
+     <!-- Botón flotante de WhatsApp -->
+    <a href="https://wa.me/5491171573793?text=¡Hola!%20Estoy%20interesado%20en%20los%20muebles%20de%20la%20carpintería." 
+       class="whatsapp-float" 
+       target="_blank" 
+       rel="noopener noreferrer">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+    <script>
+    // script.js
+window.addEventListener('scroll', () => {
+  const nav = document.querySelector('.navbar');
+  if (window.scrollY > 50) {
+    nav.classList.add('scrolled');
+  } else {
+    nav.classList.remove('scrolled');
+  }
+});
+
+ </script>
+</body>
+</html>
