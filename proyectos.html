@@ -1,14 +1,166 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Carpintería Minin - Clientes</title>
+    <title>Carpintería Minin - Nuestros Clientes</title>
+    <link rel="stylesheet" href="/assets/css/proyectos.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+
 </head>
+
 <body>
-    
+    <!-- Navegación Traslúcida -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <a class="navbar-brand" href="index.html">MI<span>N</span>IN</a>
+            </div>
+            <div class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="proyectos.html">Clientes</a></li>
+                <li><a href="#productos">Productos</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </div>
+    </nav>
 
-<h1>rgd</h1>
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <div class="container">
+                <div class="hero-content">
+                    <h1 class="hero-title">Nuestros Clientes</h1>
+                    <p class="hero-description">
+                        Descubre los proyectos únicos que hemos realizado para nuestros clientes.
+                        Cada trabajo refleja nuestra pasión por la carpintería de alta calidad y el diseño
+                        personalizado.
+                    </p>
+                    <div class="hero-stats">
+                        <div class="stat-item">
+                            <span class="stat-number">500+</span>
+                            <span class="stat-label">Proyectos Completados</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">15+</span>
+                            <span class="stat-label">Años de Experiencia</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">98%</span>
+                            <span class="stat-label">Satisfacción del Cliente</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
+        <section class="contenedor">
+
+            <!-- Tarjeta 1 -->
+            <div class="tarjeta">
+                <div class="imagen-contenedor">
+                    <img src="/assets/images/RabietaA.jpg" alt="Rabieta Pilar">
+                    <div class="btn-ver">
+                        <a href="/clientes/rabieta.html" style="color: white; text-decoration: none;">
+                            <i class="fa-solid fa-eye"></i> Ver Proyecto
+                        </a>
+                    </div>
+                </div>
+                <div class="contenido">
+                    <h3 class="titulo">Rabieta Pilar <span class="etiqueta">Residencial</span></h3>
+                    <p class="descripcion">Un proyecto integral de mobiliario para un bar moderno de 550m² que combina
+                        elegancia contemporánea con funcionalidad excepcional.</p>
+                    <div class="info-extra">
+                        <div class="info-item"><i class="fa-solid fa-calendar"></i> Marzo 2024</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tarjeta 2 -->
+              <div class="tarjeta">
+                <div class="imagen-contenedor">
+                    <img src="/assets/images/LasaiguesA.jpeg" alt="Rabieta Pilar">
+                    <div class="btn-ver">
+                        <a href="/clientes/lasaigues.html" style="color: white; text-decoration: none;">
+                            <i class="fa-solid fa-eye"></i> Ver Proyecto
+                        </a>
+                    </div>
+                </div>
+                <div class="contenido">
+                    <h3 class="titulo">Lasaigues Padel San Isidro <span class="etiqueta">Residencial</span></h3>
+                    <p class="descripcion">Revestimiento y estructura en madera de eucalipto para cancha de pádel.</p>
+                    <div class="info-extra">
+                        <div class="info-item"><i class="fa-solid fa-calendar"></i> Noviembre 2024</div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Tarjeta 3 -->
+              <div class="tarjeta">
+                <div class="imagen-contenedor">
+                    <img src="/assets/images/clienteZelayaA.jpeg" alt="Rabieta Pilar">
+                    <div class="btn-ver">
+                        <a href="/clientes/zelayapartic.html" style="color: white; text-decoration: none;">
+                            <i class="fa-solid fa-eye"></i> Ver Proyecto
+                        </a>
+                    </div>
+                </div>
+                <div class="contenido">
+                    <h3 class="titulo">Cliente Particular <span class="etiqueta">Residencial</span></h3>
+                    <p class="descripcion">Revestimiento de pared en madera de eucalipto machihembrada.</p>
+                    <div class="info-extra">
+                        <div class="info-item"><i class="fa-solid fa-calendar"></i> Marzo 2024</div>
+                    </div>
+                </div>
+            </div>
+
+
+        </section>
+
+        <!-- Load More Button -->
+        <div class="load-more-container">
+            <button class="btn-load-more" id="loadMoreBtn">
+                <i class="fas fa-plus"></i>
+                Cargar Más Proyectos
+            </button>
+        </div>
+        </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer id="contacto" class="footer">
+        <div class="contact-info">
+            <h3>Información de contacto</h3>
+            <p><strong>Dirección:</strong> Av. Cnel. Roca 7131, C1439 CABA, Buenos Aires</p>
+            <p><strong>Horario:</strong> Lunes a Sábado de 9 a 18 hs</p>
+            <div class="social-icons">
+                <a href="https://www.instagram.com/carpinteria.ch2v?igsh=cWMwdW8xMHd1OXMw" target="_blank"><i
+                        class="fab fa-instagram"></i></a>
+                <a href="https://wa.me/5491171573793?text=¡Hola!%20Estoy%20interesado%20en%20los%20muebles%20de%20la%20carpintería."
+                    target="_blank">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Carpintería Minin. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Botón flotante de WhatsApp -->
+    <a href="https://wa.me/5491171573793?text=¡Hola!%20Estoy%20interesado%20en%20los%20muebles%20de%20la%20carpintería."
+        class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script src="/assets/js/proyectos.js"></script>
 </body>
+
 </html>

@@ -80,7 +80,7 @@
       <div class="gallery">
         <div class="gallery-item">
           <a href="clientes/rabieta.html" target="_blank">
-            <img src="assets/images/RabietaA.jpg" alt="Rabieta" />
+            <img src="assets/images/RabietaA.jpg" alt="Rabieta" loading="lazy" />
             <div class="overlay">
               <h3>Rabieta Pilar</h3>
             </div>
@@ -88,7 +88,7 @@
         </div>
         <div class="gallery-item">
           <a href="clientes/lasaigues.html" target="_blank">
-          <img src="assets/images/LasaiguesA.jpeg" alt="Lasaigues" />
+          <img src="assets/images/LasaiguesA.jpeg" alt="Lasaigues" loading="lazy" />
           <div class="overlay">
             <h3>Lasaigues Padel San Isidro</h3>
           </div>
@@ -124,6 +124,16 @@
         </div>
       </div>
     </div>
+    <!-- Call to Action -->
+    <section class="cta-section">
+      <div class="container">
+        <div class="cta-content">
+          <a href="/proyectos.html" class="btn btn-primary btn-large">
+            <i class="fas fa-arrow-right"></i> Ver Otros Trabajos
+          </a>
+        </div>
+      </div>
+    </section>
   </section>
 
   <!-- Sección de Productos -->
@@ -185,16 +195,15 @@
   </footer>
 
   <!-- Script -->
-  <script src="scripts/script.js"></script>
+  <script src="/assets/js/index.js"></script>
 
   <!-- Botón flotante de WhatsApp -->
   <a href="https://wa.me/5491171573793?text=¡Hola!%20Estoy%20interesado%20en%20los%20muebles%20de%20la%20carpintería."
     class="whatsapp-float" target="_blank" rel="noopener noreferrer">
     <i class="fab fa-whatsapp"></i>
   </a>
-
-  <script>
-    window.addEventListener('scroll', () => {
+<script>
+   window.addEventListener('scroll', () => {
       const nav = document.querySelector('.navbar');
       if (window.scrollY > 50) {
         nav.classList.add('scrolled');
@@ -202,7 +211,8 @@
         nav.classList.remove('scrolled');
       }
     });
-  </script>
+</script>
+
 </body>
 
 </html>

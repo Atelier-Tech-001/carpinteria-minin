@@ -250,15 +250,16 @@ body {
 
 
 /* Galería */
+
 .gallery-section {
     padding: 80px 0;
     background-color: #f9f5f2;
 }
 
 .gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
 }
 
 .gallery-item {
@@ -299,10 +300,33 @@ body {
 }
 
 .overlay h3 {
-    color: white;
-    font-size: 1.5rem;
+  color: white;
+  font-size: 1.5rem;
+  text-align: center;
+  padding: 0 15px;
+  transform: translateY(20px);
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  opacity: 0;
+}
+
+.gallery-item:hover .overlay h3 {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.cta-section {
+    padding: 40px 0;
+    background-color: #f9f5f2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-align: center;
-    padding: 0 15px;
+}
+
+.cta-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 /* Productos */
