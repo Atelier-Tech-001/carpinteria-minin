@@ -1,4 +1,4 @@
-  /* Estilos Generales */
+   /* Estilos Generales */
 * {
     margin: 0;
     padding: 0;
@@ -123,8 +123,7 @@ body {
 /* Hero Project Section */
 .hero-project {
     position: relative;
-    height: 70vh;
-    min-height: 500px;
+    height: 100vh; /* Cambiado de 70vh a 100vh */
     overflow: hidden;
 }
 
@@ -151,11 +150,13 @@ body {
         rgba(0, 0, 0, 0.7) 100%
     );
     display: flex;
-    align-items: flex-end;
+    justify-content: center; /* centra horizontalmente */
+    align-items: flex-end;   /* coloca el contenido abajo */
+    padding: 3rem;           /* separación del borde inferior */
 }
 
 .hero-content {
-    padding: 3rem;
+    text-align: center;
     color: var(--text-white);
     max-width: 800px;
 }
@@ -172,6 +173,7 @@ body {
     display: flex;
     gap: 2rem;
     flex-wrap: wrap;
+    color: antiquewhite;
 }
 
 .project-date,
