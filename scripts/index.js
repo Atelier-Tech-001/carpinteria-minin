@@ -77,14 +77,6 @@ carousel.addEventListener('mouseleave', () => {
     carouselInterval = setInterval(nextSlide, 5000);
 });
 
-// Galería - Mostrar información al hacer clic
-document.querySelectorAll('.gallery-item').forEach(item => {
-    item.addEventListener('click', () => {
-        const title = item.querySelector('h3').textContent;
-        alert(`Has seleccionado: ${title}\nAquí se mostraría más información sobre este proyecto.`);
-    });
-});
-
 
 // Animación de scroll suave para los enlaces de navegación
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
