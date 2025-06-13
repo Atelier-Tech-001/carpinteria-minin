@@ -75,15 +75,16 @@ body {
     align-items: center;
     padding: 15px;
 }
+
 .navbar-brand {
     font-size: 28px;
     font-weight: bold;
-    color: #333; /* gris oscuro */
+    color: #333;
     text-decoration: none;
 }
 
 .navbar-brand span {
-    color: #FF7F00; /* anaranjado */
+    color: #FF7F00;
 }
 
 .logo h1 {
@@ -158,7 +159,7 @@ body {
     padding: 20px;
     display: flex;
     flex-direction: column;
-    align-items: center; /* Alineación a la izquierda */
+    align-items: center;
     text-align: left;
 }
 
@@ -248,9 +249,7 @@ body {
     margin-right: auto;
 }
 
-
 /* Galería */
-
 .gallery-section {
     padding: 80px 0;
     background-color: #f9f5f2;
@@ -454,7 +453,6 @@ body {
     transform: scale(1.1);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
 }
-
 
 /* Responsive */
 @media (max-width: 992px) {

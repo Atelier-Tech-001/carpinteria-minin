@@ -600,61 +600,34 @@ body {
 
 /* Tablets verticales y móviles grandes */
 @media (max-width: 768px) {
-    .navbar .container {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .menu-toggle {
+       .menu-toggle {
         display: block;
     }
 
     .nav-menu {
-        flex-direction: column;
+        position: fixed;
+        top: 70px;
+        left: -100%;
         width: 100%;
-        margin-top: 15px;
-        display: none;
+        background-color: rgba(255, 255, 255, 0.95);
+        flex-direction: column;
+        padding: 20px 0;
+        transition: left 0.3s ease;
     }
 
     .nav-menu.active {
-        display: flex;
+        left: 0;
     }
 
     .nav-menu li {
         margin: 10px 0;
+        text-align: center;
     }
 
-    .hero-project {
-        height: auto;
-    }
-
-    .hero-overlay {
-        padding: 2rem 1rem;
-        align-items: center;
-    }
-
-    .project-title {
-        font-size: 2rem;
-    }
-
-    .cta-content h2 {
-        font-size: 1.75rem;
-    }
-
-    .cta-content p {
-        font-size: 1rem;
-    }
-
-    .gallery-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .btn-large {
-        width: 100%;
-        font-size: 1rem;
+    .footer-content {
+        grid-template-columns: 1fr;
     }
 }
-
 /* Smartphones */
 @media (max-width: 480px) {
     .container {
