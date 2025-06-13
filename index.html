@@ -148,42 +148,35 @@
     </section>
   </section>
 
-  <!-- Sección de Productos -->
+  <!-- Sección de Productos 
   <section id="productos" class="products-section">
     <div class="container">
       <h2 class="section-title">Nuestros Productos</h2>
       <div class="products">
         <div class="product-card">
-          <img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&w=600&q=80"
+          <img src="images/mesa.jpeg"
             alt="Mesas" />
-          <h3>Mesas</h3>
-          <p>Diseños personalizados para cada espacio</p>
+          <h3>Diseña tu espacio ideal</h3>
+          <p>Crea ambientes únicos con mesas hechas a medida que se adaptan a tu estilo y necesidad</p>
           <button class="btn">Ver Catálogo</button>
         </div>
         <div class="product-card">
-          <img src="https://images.unsplash.com/photo-1493663284031-b7e3aefcae8e?auto=format&fit=crop&w=600&q=80"
+          <img src="images/escritorio.jpeg"
             alt="Sillas" />
-          <h3>Sillas</h3>
-          <p>Comodidad y estilo en cada detalle</p>
+          <h3>Siéntete cómodo y elegante</h3>
+          <p>Descubre sillas que combinan confort y diseño para acompañar tus momentos</p>
           <button class="btn">Ver Catálogo</button>
         </div>
         <div class="product-card">
-          <img src="https://images.unsplash.com/photo-1595428774223-ef52624120d2?auto=format&fit=crop&w=600&q=80"
+          <img src="images/placard.jpeg"
             alt="Escritorios" />
           <h3>Escritorios</h3>
           <p>Funcionalidad para tu espacio de trabajo</p>
           <button class="btn">Ver Catálogo</button>
         </div>
-        <div class="product-card">
-          <img src="https://images.unsplash.com/photo-1540574163026-643ea20ade25?auto=format&fit=crop&w=600&q=80"
-            alt="Camas" />
-          <h3>Camas</h3>
-          <p>Descanso y elegancia para tu dormitorio</p>
-          <button class="btn">Ver Catálogo</button>
-        </div>
       </div>
     </div>
-  </section>
+  </section> -->
 
   <!-- Footer con Contacto -->
   <footer id="contacto" class="footer">
@@ -214,6 +207,29 @@
     class="whatsapp-float" target="_blank" rel="noopener noreferrer">
     <i class="fab fa-whatsapp"></i>
   </a>
+
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '501742016299073', // ← reemplazá con tu ID real
+      cookie     : true,
+      xfbml      : true,
+      version    : 'v18.0' // ← versión actual de la API
+    });
+
+    FB.AppEvents.logPageView();
+  };
+
+  (function(d, s, id){
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) { return; }
+    js = d.createElement(s); js.id = id;
+    js.src = "https://connect.facebook.net/en_US/sdk.js";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));
+</script>
+
+
 
 </body>
 
