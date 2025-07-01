@@ -14,7 +14,9 @@
   <nav class="navbar">
     <div class="container">
       <div class="logo">
-        <a class="navbar-brand" href="index.html">MI<span>N</span>IN</a>
+        <a class="navbar-brand" href="../index.html">
+          <img src="images/AALogo-Photoroom.png" alt="Logo">
+        </a>
       </div>
       <div class="menu-toggle">
         <i class="fas fa-bars"></i>
@@ -22,7 +24,8 @@
       <ul class="nav-menu">
         <li><a href="index.html">Inicio</a></li>
         <li><a href="proyectos.html">Clientes</a></li>
-        <li><a href="https://www.instagram.com/carpinteria.ch2v?igsh=cWMwdW8xMHd1OXMw" target="_blank">Productos</a></li>
+        <li><a href="https://www.instagram.com/carpinteria.ch2v?igsh=cWMwdW8xMHd1OXMw" target="_blank">Productos</a>
+        </li>
         <li><a href="#contacto">Contacto</a></li>
       </ul>
     </div>
@@ -98,7 +101,7 @@
           </a>
         </div>
 
-       <div class="gallery-item">
+        <div class="gallery-item">
           <a href="clientes/vajilleroparrilla.html">
             <img src="images/vajilleroA.jpeg" alt="Parrilla Roca" loading="lazy" />
             <div class="overlay">
@@ -208,26 +211,26 @@
     <i class="fab fa-whatsapp"></i>
   </a>
 
-<script>
-  window.fbAsyncInit = function() {
-    FB.init({
-      appId      : '501742016299073', // ← reemplazá con tu ID real
-      cookie     : true,
-      xfbml      : true,
-      version    : 'v18.0' // ← versión actual de la API
-    });
+  <script>
+    window.fbAsyncInit = function () {
+      FB.init({
+        appId: '501742016299073', // ← reemplazá con tu ID real
+        cookie: true,
+        xfbml: true,
+        version: 'v18.0' // ← versión actual de la API
+      });
 
-    FB.AppEvents.logPageView();
-  };
+      FB.AppEvents.logPageView();
+    };
 
-  (function(d, s, id){
-    var js, fjs = d.getElementsByTagName(s)[0];
-    if (d.getElementById(id)) { return; }
-    js = d.createElement(s); js.id = id;
-    js.src = "https://connect.facebook.net/en_US/sdk.js";
-    fjs.parentNode.insertBefore(js, fjs);
-  }(document, 'script', 'facebook-jssdk'));
-</script>
+    (function (d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) { return; }
+      js = d.createElement(s); js.id = id;
+      js.src = "https://connect.facebook.net/en_US/sdk.js";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+  </script>
 
 
 
